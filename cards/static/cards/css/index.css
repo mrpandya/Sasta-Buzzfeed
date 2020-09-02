@@ -1,0 +1,51 @@
+ 
+.rocket{
+    position: absolute;
+      top: 60%;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+  }
+  .rocket img{
+  
+    height:100px;
+    width :100px;
+  }
+  
+  
+  .fire{
+    z-index: -1;
+    position: absolute;
+    top: 72.5%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+  
+  }
+  .fire img{
+    height:60px;
+    width:60px;
+    cursor: -moz-grabbing;
+  
+  }
+  #start{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+  }
+  #btn_text {
+    position: absolute;
+    top:85%;
+    left:0%;
+    right:0%;
+    color: #FFF;
+    text-align: center;
+    font-family: "lato", sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin-top: -60px;
+    padding-left: 10px;
+  }

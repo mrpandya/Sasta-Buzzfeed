@@ -1,0 +1,20 @@
+{%load static%}
+<link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+<title>Sasta BuzzFeed</title>
+<link rel="stylesheet" type="text/css" href="{%static 'cards/css/index.css'%}">
+<link rel="stylesheet" type="text/css" href="{%static 'cards/css/stars.css'%}">
+<div id='stars'></div>
+<div id='stars2'></div>
+<div id='stars3'></div>
+<div id="title">Sasta BuzzFeed</div>
+<div id="start">
+  <div ><a id="btn_text" href="{%url 'buzz:home'%}"style="text-decoration: none;">Click to take off!!!</a></div>
+    <div class="rocket">
+        <img src="{%static 'cards/images/rocket.png'%}" id="fly_rocket" alt="rocket">
+    </div>
+    <div class="rocket fire" id="fire">
+        <img src="{%static 'cards/images/fire1.png'%}" id="fly_fire" alt="fire">
+    </div>
+</div>
+
+<script src="{%static 'cards/js/index.js'%}"></script>
