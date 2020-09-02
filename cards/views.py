@@ -8,3 +8,10 @@ class IndexView(generic.ListView):
     context_object_name='title'
     def get_queryset(self):
         return Title.objects.all()
+
+class HomeView(generic.ListView):
+    template_name='cards/home.html'
+    context_object_name='title'
+    def get_queryset(self):
+        return Title.objects.all()
+
