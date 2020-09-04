@@ -1,7 +1,9 @@
 document.getElementById("fire").style.visibility="hidden";
 document.getElementById("btn_text").onclick=function(){fly()};
 function getStarted() {
-//   window.location.replace('../../templates/cards/home.html');
+//   window.location.replace('home');
+    var path=window.location.href;
+    window.location.replace("/home",path);
 }
 function fly(){
     document.getElementById("fire").style.visibility="initial";

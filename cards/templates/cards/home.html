@@ -1,17 +1,26 @@
 {%load static%}
 <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
-<title>Sasta BuzzFeed| Home</title>
+<title>Home | Sasta BuzzFeed</title>
 <link rel="stylesheet" type="text/css" href="{%static 'cards/css/stars.css'%}">
+<link rel="stylesheet" type="text/css" href="{%static 'cards/css/bootstrap.css'%}">
+<body style="background:transparent;">
 <div id='stars'></div>
 <div id='stars2'></div>
 <div id='stars3'></div>
 <div id="title" style="top:20%">Chose Your Quiz</div>
 {%if title%}
     {%for titles in title%}
-        <div>{{titles.title}}</div>
-        <br/>
+      <div id="title">
+        {{titles.title}}
+      </div>
     {%endfor%}
 {%else%}
     <div id="title" style="font-size: 60px;">No Quiz Available :(</div>
     <a id="title" href="#" style="font-size:30px;top:70%;letter-spacing: 5px;text-decoration: none;">Create your own Quiz??? </a>
 {%endif%}
+</body>
+<script src="{%static 'cards/css/bootstrap.js'%}"></script>
+
+
+<!-- <div id="title" style="letter-spacing: 2px; font-size: 20px;">{{titles.title}}</div>
+<br/> -->
