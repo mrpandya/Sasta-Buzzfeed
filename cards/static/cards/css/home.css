@@ -1,0 +1,42 @@
+html {
+    height: 100%;
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    overflow-x: auto;
+    overflow-y: auto;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+
+#list{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+#questions{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+#questions img{
+    z-index: 10;
+    opacity: 1;
+    margin:0px auto;
+}
+
+@media screen and (max-width:600px){
+    .text{
+        font-size:15px;
+        letter-spacing: 1px;
+        position: relative;
+    
+    }
+}
+
+@media screen and (min-width:600px){
+    .text{
+        font-size:35px;
+        letter-spacing: 5px;
+        position: relative;
+    
+    }
+}
