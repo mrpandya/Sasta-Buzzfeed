@@ -3,6 +3,7 @@ document.getElementById("btn_text").onclick=function(){fly()};
 function getStarted() {
 //   window.location.replace('home');
     var path=window.location.href;
+    
     window.location.replace("/home",path);
 }
 function fly(){

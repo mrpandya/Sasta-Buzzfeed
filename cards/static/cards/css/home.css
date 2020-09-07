@@ -1,13 +1,14 @@
 html {
     height: 100%;
     background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-    overflow-x: auto;
-    overflow-y: auto;
+    /* overflow-x: auto;
+    overflow-y: auto; */
     background-attachment: fixed;
     background-repeat: no-repeat;
   }
 
 #list{
+    overflow: auto;
     display:flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -39,4 +40,8 @@ html {
         position: relative;
     
     }
+}
+
+#ufo{
+    z-index:3;
 }

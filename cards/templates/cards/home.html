@@ -9,28 +9,21 @@
   <link rel="stylesheet" type="text/css" href="{%static 'cards/css/bootstrap.css'%}">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <title>Home | Sasta BuzzFeed</title>
-  <script>
-    $(function () {
-        $(document).ready(function () {
-          $(this).siblings('.ufo').hide();
-        });
-      });
-    </script>
 </head>
 <body style="background:transparent;">
   <div id='stars'></div>
   <div id='stars2'></div>
   <div id='stars3'></div>
+  <img src="{%static 'cards/images/ufo.png'%}" id="ufo1" alt="ufo" style="position: absolute;">
   <div class="container-fluid">
-    <div id="title" style="top:20%">Chose Your Quiz</div>
+    <div id="title" style="top:15%">Chose Your Quiz</div>
   {%if title%}
-  <div class="container" id="list" style="margin-top:15%">
+  <div class="container" id="list" style="margin-top:10%;">
       {%for titles in title%}
-        <img src="{%static 'cards/images/ufo.png'%}" id="ufo" alt="ufo">
-        <div class="container" id="questions" style="margin-top:25px">
-          <img src="{%static 'cards/images/box.svg'%}" alt="box" style="width :70px; height:70px;z-index: 2;">    
+        <div class="container" id="questions" style="margin-top:20px">
+          <img src="{%static 'cards/images/box.svg'%}" id="box{{forloop.counter}}" alt="box" style="width :70px; height:70px;z-index: 2;">    
           <div class="container text" id="title" style="font-size:35px;letter-spacing: 5px;position: relative;">
-            <a href="#" id="title"style="font-size:35px;letter-spacing: 5px;position: relative;text-decoration:none">{{titles.title}} Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, harum?</a>
+            <a  id="title{{forloop.counter}}"style="font-size:35px;letter-spacing: 5px;position: relative;text-decoration:none;color: #FFF;text-align: center;font-family:'lato', sans-serif;font-weight: 300;cursor:pointer;">{{titles.title}} Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, harum?</a>
           </div>
         </div>
       {%endfor%}
