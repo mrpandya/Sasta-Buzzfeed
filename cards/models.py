@@ -1,4 +1,5 @@
 from django.db import models
+import random
 
 # Create your models here.
 class Title(models.Model):
@@ -7,8 +8,21 @@ class Title(models.Model):
     ans2=models.CharField(max_length=500)
     ans3=models.CharField(max_length=500)
     ans4=models.CharField(max_length=500)
-    def __str__(self):
-        return self.title
+    sol=models.IntegerField(default=0)
+    def final_answer(self,vote):
+        self.sol+=vote
+    def sel_answer(self):
+        self.sol=random.randrange(1,5)
+        if(self.sol==1):
+            return ans1
+        elif self.sol==2:
+            return ans2
+        elif self.sol==3:
+            return ans3
+        else:
+            return ans4
+    # def __str__(self):
+        # return self.title,self.id
 
 
 class Question(models.Model):

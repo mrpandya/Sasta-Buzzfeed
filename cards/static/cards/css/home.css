@@ -7,12 +7,7 @@ html {
     background-repeat: no-repeat;
   }
 
-#list{
-    overflow: auto;
-    display:flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
+
 #questions{
     display:flex;
     flex-direction: row;
@@ -45,3 +40,24 @@ html {
 #ufo{
     z-index:3;
 }
+
+@media screen and (max-width:600px){
+    #list{
+        overflow: auto;
+        display:flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-top:30%;
+    }
+}
+@media screen and (min-width:600px){
+    #list{
+        overflow: auto;
+        display:flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-top:10%;
+    }
+}
+
+/* style="@media screen and (max-width:600px){margin-top:40%;}@media screen and (min-width:600px){margin-top:10%;}" */

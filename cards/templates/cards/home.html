@@ -16,14 +16,15 @@
   <div id='stars3'></div>
   <img src="{%static 'cards/images/ufo.png'%}" id="ufo1" alt="ufo" style="position: absolute;">
   <div class="container-fluid">
-    <div id="title" style="top:15%">Chose Your Quiz</div>
+    <div id="title" style="margin-top:6%;position: relative;">Chose Your Quiz</div>
   {%if title%}
-  <div class="container" id="list" style="margin-top:10%;">
+  <div class="container" id="list" >
       {%for titles in title%}
-        <div class="container" id="questions" style="margin-top:20px">
+        <div class="container" id="questions" style="margin-top:50px">
           <img src="{%static 'cards/images/box.svg'%}" id="box{{forloop.counter}}" alt="box" style="width :70px; height:70px;z-index: 2;">    
-          <div class="container text" id="title" style="font-size:35px;letter-spacing: 5px;position: relative;">
-            <a  id="title{{forloop.counter}}"style="font-size:35px;letter-spacing: 5px;position: relative;text-decoration:none;color: #FFF;text-align: center;font-family:'lato', sans-serif;font-weight: 300;cursor:pointer;">{{titles.title}} Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, harum?</a>
+          <div class="container text" id="title" style="font-size:35px;letter-spacing: 5px;position: relative;display:flex;
+          flex-wrap: wrap;margin-left:90px">
+            <a  id="title{{forloop.counter}}"style="font-size:35px;letter-spacing: 5px;position: relative;text-decoration:none;color: #FFF;text-align: center;font-family:'lato', sans-serif;font-weight: 300;cursor:pointer;">{{titles.title}}</a>
           </div>
         </div>
       {%endfor%}

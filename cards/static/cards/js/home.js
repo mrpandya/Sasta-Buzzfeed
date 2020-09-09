@@ -54,9 +54,11 @@ function fly_away1(){
         }
     }
     function left1() {
-        if (pos==1000||up==3000) {
+        if (pos==800||up==3000) {
             clearInterval(id);
             // url for the next page will go here 
+            window.location.replace("#");
+
         }
         else{
             var show=setInterval(fade,1);
@@ -108,9 +110,11 @@ function fly_away2(){
         }
     }
     function left1() {
-        if (pos==1000||up==3000) {
+        if (pos==800||up==3000) {
             clearInterval(id);
             // url for the next page will go here
+            window.location.replace("#");
+
         }
         else{
             var show=setInterval(fade,1);
@@ -149,7 +153,7 @@ function fly_away3(){
     var box=0;
     var id = setInterval(left,5);
     function left() {
-        if (pos==1000||up==3000) {
+        if (pos==500||up==3000) {
             setTimeout(left1,1000);
             // clearInterval(id);
         }
@@ -161,9 +165,10 @@ function fly_away3(){
         }
     }
     function left1() {
-        if (pos==500||up==3000) {
+        if (pos==800||up==3000) {
             clearInterval(id);
             // url for the next page will go here
+            window.location.replace("#");
         }
         else{
             var show=setInterval(fade,1);
@@ -202,7 +207,7 @@ function fly_away4(){
     var box=0;
     var id = setInterval(left,5);
     function left() {
-        if (pos==1000||up==3000) {
+        if (pos==500||up==3000) {
             setTimeout(left1,1000);
             // clearInterval(id);
         }
@@ -214,9 +219,10 @@ function fly_away4(){
         }
     }
     function left1() {
-        if (pos==500||up==3000) {
+        if (pos==800||up==3000) {
             clearInterval(id);
-            //url for the next page will go here
+            // url for the next page will go here
+            window.location.replace("#");
         }
         else{
             var show=setInterval(fade,1);
@@ -256,7 +262,7 @@ function fly_away5(){
     var box=0;
     var id = setInterval(left,5);
     function left() {
-        if (pos==1000||up==3000) {
+        if (pos==500||up==3000) {
             setTimeout(left1,1000);
             // clearInterval(id);
         }
@@ -268,9 +274,11 @@ function fly_away5(){
         }
     }
     function left1() {
-        if (pos==500||up==3000) {
+        if (pos==800||up==3000) {
             clearInterval(id);
             // url for the next page will go over here
+            window.location.replace("#");
+
         }
         else{
             var show=setInterval(fade,1);
