@@ -11,16 +11,18 @@ class Title(models.Model):
     sol=models.IntegerField(default=0)
     def final_answer(self,vote):
         self.sol+=vote
+        print(self.sol)
+        return self.sol
     def sel_answer(self):
         self.sol=random.randrange(1,5)
         if(self.sol==1):
-            return ans1
+            return self.ans1
         elif self.sol==2:
-            return ans2
+            return self.ans2
         elif self.sol==3:
-            return ans3
+            return self.ans3
         else:
-            return ans4
+            return self.ans4
     # def __str__(self):
         # return self.title,self.id
 

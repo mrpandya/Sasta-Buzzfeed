@@ -1,3 +1,13 @@
+// var x=document.getElementById("1").innerHTML;
+// console.log(x);
+var questions=[];
+for(var i=1;i<=5;i++){
+    if(document.getElementById(i)){
+        questions[i-1]=document.getElementById(i).innerHTML;
+    }
+}
+console.log(questions);
+
 document.getElementById("ufo1").style.display="none";
 
 if(document.getElementById("title1")){
@@ -57,7 +67,7 @@ function fly_away1(){
         if (pos==800||up==3000) {
             clearInterval(id);
             // url for the next page will go here 
-            window.location.replace("#");
+            window.location.replace("home/"+questions[0]);
 
         }
         else{
@@ -113,8 +123,7 @@ function fly_away2(){
         if (pos==800||up==3000) {
             clearInterval(id);
             // url for the next page will go here
-            window.location.replace("#");
-
+            window.location.replace("home/"+questions[1]);
         }
         else{
             var show=setInterval(fade,1);
@@ -168,7 +177,7 @@ function fly_away3(){
         if (pos==800||up==3000) {
             clearInterval(id);
             // url for the next page will go here
-            window.location.replace("#");
+            window.location.replace("home/"+questions[2]);
         }
         else{
             var show=setInterval(fade,1);
@@ -222,7 +231,7 @@ function fly_away4(){
         if (pos==800||up==3000) {
             clearInterval(id);
             // url for the next page will go here
-            window.location.replace("#");
+            window.location.replace("home/"+questions[3]);
         }
         else{
             var show=setInterval(fade,1);
@@ -277,8 +286,7 @@ function fly_away5(){
         if (pos==800||up==3000) {
             clearInterval(id);
             // url for the next page will go over here
-            window.location.replace("#");
-
+            window.location.replace("home/"+questions[4]);
         }
         else{
             var show=setInterval(fade,1);

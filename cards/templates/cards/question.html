@@ -1,0 +1,52 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en" style="overflow-y: auto;">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="{%static 'cards/css/stars.css'%}">
+  <link rel="stylesheet" type="text/css" href="{%static 'cards/css/bootstrap.css'%}">
+  <link rel="stylesheet" type="text/css" href="{%static 'cards/css/question.css'%}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title>Quiz | Sasta BuzzFeed</title>
+</head>
+<body style="background:transparent;">
+    <div id='stars'></div>
+    <div id='stars2'></div>
+    <div id='stars3'></div>
+    <div class="container">
+        <div id="title" style="position: relative; margin-top:5%">
+            {{question_list.title}}
+        </div>
+        {%for question in question_list.question_set.all%}
+            <div class="container question">
+                <img src="{% static 'cards/images/alien.png'%}" alt="alien" class="alien">
+                <a id="question_text">{{question.question}}</a>
+            </div>
+            <div class="container choice_field">
+                <div class="choice">
+                    <input type="button" value="{{question.choice1}}"><br/>
+                </div>
+                <div class="choice">
+                    <input type="button" value="{{question.choice2}}"><br/>
+                </div>
+                <div class="choice">
+                    <input type="button" value="{{question.choice3}}"><br/>
+                </div>
+                <div class="choice">
+                    <input type="button" value="{{question.choice4}}"><br/>
+                </div>
+                <div class="choice">
+                    <input type="button" value="{{question.choice5}}"><br/>
+                </div>
+                <div class="choice">
+                    <input type="button" value="{{question.choice6}}"><br/>
+                </div>
+            </div>
+        {%endfor%}
+    </div>
+</body>
+<script src="{%static 'cards/js/bootstrap.js'%}"></script>
+<script src="{%static 'cards/js/home.js'%}"></script>
+</html>

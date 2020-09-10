@@ -15,3 +15,7 @@ class HomeView(generic.ListView):
     def get_queryset(self):
         return Title.objects.all()[:5]
 
+class QuestionView(generic.DetailView):
+    template_name='cards/question.html'
+    context_object_name='question_list'
+    model=Title

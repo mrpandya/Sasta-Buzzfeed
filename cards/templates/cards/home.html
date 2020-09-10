@@ -26,7 +26,12 @@
           flex-wrap: wrap;margin-left:90px">
             <a  id="title{{forloop.counter}}"style="font-size:35px;letter-spacing: 5px;position: relative;text-decoration:none;color: #FFF;text-align: center;font-family:'lato', sans-serif;font-weight: 300;cursor:pointer;">{{titles.title}}</a>
           </div>
+          <span id="{{forloop.counter}}" >{{titles.id}}</span>
         </div>
+        <!-- <script>
+          var x= {{titles.id}};
+          console.log(x);
+        </script> -->
       {%endfor%}
     </div>
   {%else%}
