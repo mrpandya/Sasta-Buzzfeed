@@ -1,6 +1,6 @@
 {%load static%}
 <!DOCTYPE html>
-<html lang="en" style="overflow-y: auto;">
+<html lang="en" style="overflow-y:auto" >
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,33 +20,40 @@
             {{question_list.title}}
         </div>
         {%for question in question_list.question_set.all%}
-            <div class="container question">
-                <img src="{% static 'cards/images/alien.png'%}" alt="alien" class="alien">
-                <a id="question_text">{{question.question}}</a>
-            </div>
-            <div class="container choice_field">
-                <div class="choice">
-                    <input type="button" value="{{question.choice1}}"><br/>
+            <section id="{{forloop.counter}}">
+                <div class="container question">
+                    <img src="{% static 'cards/images/alien.png'%}" alt="alien" class="alien">
+                    <div class="container question_bg">
+                        <a class="question_text">{{question.question}}</a>
+                    </div>
                 </div>
-                <div class="choice">
-                    <input type="button" value="{{question.choice2}}"><br/>
+                <div class="container choice_field">
+                    <div class="choice">
+                        <input type="button" class="btn btn-primary choice_btn" id="choice1" value="{{question.choice1}}"><br/>
+                    </div>
+                    <div class="choice">
+                        <input type="button" class="btn btn-primary choice_btn" id="choice2" value="{{question.choice2}}"><br/>
+                    </div>
+                    <div class="choice">
+                        <input type="button" class="btn btn-primary choice_btn" id="choice3" value="{{question.choice3}}"><br/>
+                    </div>
+                    <div class="choice">
+                        <input type="button" class="btn btn-primary choice_btn" id="choice4" value="{{question.choice4}}"><br/>
+                    </div>
+                    <div class="choice">
+                        <input type="button" class="btn btn-primary choice_btn" id="choice5" value="{{question.choice5}}"><br/>
+                    </div>
+                    <div class="choice">
+                        <input type="button" class="btn btn-primary choice_btn" id="choice6" value="{{question.choice6}}"><br/>
+                    </div>
                 </div>
-                <div class="choice">
-                    <input type="button" value="{{question.choice3}}"><br/>
+                <div class="container">
+                    <span class="previous" >< previous question</span>
                 </div>
-                <div class="choice">
-                    <input type="button" value="{{question.choice4}}"><br/>
-                </div>
-                <div class="choice">
-                    <input type="button" value="{{question.choice5}}"><br/>
-                </div>
-                <div class="choice">
-                    <input type="button" value="{{question.choice6}}"><br/>
-                </div>
-            </div>
+            </section>
         {%endfor%}
     </div>
 </body>
 <script src="{%static 'cards/js/bootstrap.js'%}"></script>
-<script src="{%static 'cards/js/home.js'%}"></script>
+<script src="{%static 'cards/js/question.js'%}"></script>
 </html>
