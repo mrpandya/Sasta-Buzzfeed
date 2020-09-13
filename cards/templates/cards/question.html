@@ -29,29 +29,34 @@
                 </div>
                 <div class="container choice_field">
                     <div class="choice">
-                        <input type="button" class="btn btn-primary choice_btn" id="choice1" value="{{question.choice1}}"><br/>
+                        <input type="button" class="btn btn-primary choice_btn a" id="{{forloop.counter}}a" value="{{question.choice1}}"><br/>
                     </div>
                     <div class="choice">
-                        <input type="button" class="btn btn-primary choice_btn" id="choice2" value="{{question.choice2}}"><br/>
+                        <input type="button" class="btn btn-primary choice_btn b" id="{forloop.counter}}b" value="{{question.choice2}}"><br/>
                     </div>
                     <div class="choice">
-                        <input type="button" class="btn btn-primary choice_btn" id="choice3" value="{{question.choice3}}"><br/>
+                        <input type="button" class="btn btn-primary choice_btn c" id="{forloop.counter}}c" value="{{question.choice3}}"><br/>
                     </div>
                     <div class="choice">
-                        <input type="button" class="btn btn-primary choice_btn" id="choice4" value="{{question.choice4}}"><br/>
+                        <input type="button" class="btn btn-primary choice_btn d" id="{forloop.counter}}d" value="{{question.choice4}}"><br/>
                     </div>
                     <div class="choice">
-                        <input type="button" class="btn btn-primary choice_btn" id="choice5" value="{{question.choice5}}"><br/>
+                        <input type="button" class="btn btn-primary choice_btn e" id="{forloop.counter}}e" value="{{question.choice5}}"><br/>
                     </div>
                     <div class="choice">
-                        <input type="button" class="btn btn-primary choice_btn" id="choice6" value="{{question.choice6}}"><br/>
+                        <input type="button" class="btn btn-primary choice_btn f" id="{forloop.counter}}f" value="{{question.choice6}}"><br/>
                     </div>
-                </div>
-                <div class="container">
-                    <span class="previous" >< previous question</span>
                 </div>
             </section>
         {%endfor%}
+        <div class="container">
+            <span id="previous" >< previous question</span>
+        </div>
+        <div class="container" id="answer">
+            <div class="image" >
+                <img src="{% static 'cards/images/spaceship.png'%}" alt="" height="100px" width="70px">
+            </div>
+        </div>
     </div>
 </body>
 <script src="{%static 'cards/js/bootstrap.js'%}"></script>
