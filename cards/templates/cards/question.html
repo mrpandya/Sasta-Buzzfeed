@@ -52,9 +52,15 @@
         <div class="container">
             <a id="previous" style="color: #ffff" >< previous question</a>
         </div>
-        <div class="container" id="answer">
-            <div class="image" >
-                <img src="{% static 'cards/images/spaceship.png'%}" alt="" height="100px" width="70px">
+        <div class="container-fluid" id="answer">
+            <img src="{% static 'cards/images/spaceship.png'%}" alt="" height="165px" width="105px" style="z-index: 1;">
+            <div class="container ans_field">
+                <div class="container top_bar">
+                    <span id="green"></span><span id="yellow"></span><span id="red"></span>
+                </div>
+                <div class="container ans_area">
+                    <a style="color:lightgreen">buzzfeed@home</a><a style="color:aqua">:~</a><a style="color:lightblue">$</a> <span id="answer_txt">{{question_list.sel_answer}}</span>
+                </div>
             </div>
         </div>
     </div>
@@ -62,3 +68,4 @@
 <script src="{%static 'cards/js/bootstrap.js'%}"></script>
 <script src="{%static 'cards/js/question.js'%}"></script>
 </html>
+

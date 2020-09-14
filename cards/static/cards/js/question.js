@@ -458,6 +458,17 @@ document.getElementsByClassName("f")[3].onclick=function(){
 
 //4 series
 
+var txt=document.getElementById("answer_txt").innerHTML;
+var i=0;
+document.getElementById("answer_txt").innerHTML="";
+function ans_type_anim(){
+    if(i<txt.length){
+        // document.getElementById("answer_txt").innerHTML+="|";
+        document.getElementById("answer_txt").innerHTML+=txt.charAt(i++);
+        setTimeout(ans_type_anim,50);
+    }
+}
+
 document.getElementsByClassName("a")[4].onclick=function(){
     console.log(section.length);
     //hiding the current question and making the next one visible
@@ -470,6 +481,11 @@ document.getElementsByClassName("a")[4].onclick=function(){
         if(c!=section.length){
             section[c].style.display="initial";
             typewriter(c);
+        }
+        if(c==section.length){
+            document.getElementById("previous").style.display="none";
+            document.getElementById("answer").style.display="flex";
+            ans_type_anim();
         }
         // console.log(document.getElementById("choice1").value);
     }
@@ -488,6 +504,11 @@ document.getElementsByClassName("b")[4].onclick=function(){
             section[c].style.display="initial";
             typewriter(c);
         }
+        if(c==section.length){
+            document.getElementById("previous").style.display="none";
+            document.getElementById("answer").style.display="flex";
+            ans_type_anim();
+        }
         // console.log(document.getElementById("choice1").value);
     }
 }
@@ -504,6 +525,11 @@ document.getElementsByClassName("c")[4].onclick=function(){
         if(c!=section.length){
             section[c].style.display="initial";
             typewriter(c);
+        }
+        if(c==section.length){
+            document.getElementById("previous").style.display="none";
+            document.getElementById("answer").style.display="flex";
+            ans_type_anim();
         }
         // console.log(document.getElementById("choice1").value);
     }
@@ -522,6 +548,11 @@ document.getElementsByClassName("d")[4].onclick=function(){
             section[c].style.display="initial";
             typewriter(c);
         }
+        if(c==section.length){
+            document.getElementById("previous").style.display="none";
+            document.getElementById("answer").style.display="flex";
+            ans_type_anim();
+        }
         // console.log(document.getElementById("choice1").value);
     }
 }
@@ -538,6 +569,11 @@ document.getElementsByClassName("e")[4].onclick=function(){
         if(c!=section.length){
             section[c].style.display="initial";
             typewriter(c);
+        }
+        if(c==section.length){
+            document.getElementById("previous").style.display="none";
+            document.getElementById("answer").style.display="flex";
+            ans_type_anim();
         }
         // console.log(document.getElementById("choice1").value);
     }
@@ -556,9 +592,16 @@ document.getElementsByClassName("f")[4].onclick=function(){
             section[c].style.display="initial";
             typewriter(c);
         }
+        if(c==section.length){
+            document.getElementById("previous").style.display="none";
+            document.getElementById("answer").style.display="flex";
+            ans_type_anim();
+        }
         // console.log(document.getElementById("choice1").value);
     }
 }
+
+
 
 //5 series
 
