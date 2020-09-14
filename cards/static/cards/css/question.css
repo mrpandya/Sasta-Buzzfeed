@@ -72,7 +72,7 @@
     
 }
 
-.previous{
+#previous{
     bottom:40px;
     padding:10px 20px;
     justify-self: center;
@@ -88,7 +88,8 @@
     cursor: pointer;
 }
 
-.previous span {
+
+#previous span {
     background: -webkit-linear-gradient(white, #38495a);
     /* -webkit-background-clip: text; */
     -webkit-text-fill-color: transparent;
