@@ -1,0 +1,35 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en" style="overflow-y: auto">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="{%static 'cards/css/stars.css'%}">
+  <link rel="stylesheet" type="text/css" href="{%static 'cards/css/bootstrap.css'%}">
+  <link rel="stylesheet" type="text/css" href="{%static 'cards/css/create.css'%}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title>Create | Sasta BuzzFeed</title>
+</head>
+<body>
+    <div>
+        <form method="POST">
+            {{ title.as_p }}
+            <p>question 1</p>
+            {{question1.as_p}}
+            <p>question 2</p>
+            {{question2.as_p}}
+            <p>question 3</p>
+            {{question3.as_p}}
+            <p>question 4</p>
+            {{question4.as_p}}
+            <p>question 5</p>
+            {{question5.as_p}}
+            {%  csrf_token %}
+            <input type="submit" class="btn btn-primary" value="create">
+        </form>
+    </div>
+</body>
+<script src="{%static 'cards/js/bootstrap.js'%}"></script>
+<script src="{%static 'cards/js/create.js'%}"></script>
+</html>

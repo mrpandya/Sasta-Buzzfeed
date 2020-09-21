@@ -5,8 +5,6 @@ document.getElementById("answer").style.display="none";
 if(c==0){
     document.getElementById("previous").style.display="none";
 }
-
-
 for (var i = 1;i<=5;i++){
     if(document.getElementById(i)){
         section.push(document.getElementById(i));

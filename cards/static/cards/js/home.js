@@ -6,6 +6,11 @@ for(var i=1;i<=5;i++){
         questions[i-1]=document.getElementById(i).innerHTML;
     }
 }
+for(var i=1;i<=5;i++){
+    if(document.getElementById(i)){
+        document.getElementById(i).display="none";
+    }
+}
 console.log(questions);
 
 document.getElementById("ufo1").style.display="none";
@@ -97,7 +102,7 @@ function fly_away1(){
 }
 
 function fly_away2(){
-    console.log("hello2");
+    console.log("hello1");
     var pos=0;
     var up=0;
     document.getElementById("ufo1").style.display="initial";
@@ -106,7 +111,7 @@ function fly_away2(){
     var title=document.getElementById("title2");
     var opa=1;
     var box=0;
-    var id = setInterval(left,5);
+    var id = setInterval(left,1);
     function left() {
         if (pos==500||up==3000) {
             setTimeout(left1,1000);
@@ -120,13 +125,14 @@ function fly_away2(){
         }
     }
     function left1() {
-        if (pos==800||up==3000) {
+        if (pos==800) {
             clearInterval(id);
-            // url for the next page will go here
+            // url for the next page will go here 
             window.location.replace("home/"+questions[1]);
+
         }
         else{
-            var show=setInterval(fade,1);
+            var show=setInterval(fade,100);
             console.log(up);
             pos++;
             ufo.style.transform="translateY("+up+"px)";
@@ -148,7 +154,8 @@ function fly_away2(){
             }
             title.style.opacity=opa;
         }
-}}
+    }
+}
 
 function fly_away3(){
     console.log("hello3");

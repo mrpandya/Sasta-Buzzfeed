@@ -23,8 +23,8 @@ class Title(models.Model):
             return self.ans3
         else:
             return self.ans4
-    # def __str__(self):
-        # return self.title,self.id
+    def __str__(self):
+        return self.title
 
 
 class Question(models.Model):
