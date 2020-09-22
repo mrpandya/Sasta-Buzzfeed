@@ -11,23 +11,49 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <title>Create | Sasta BuzzFeed</title>
 </head>
-<body>
-    <div>
+<body style="background:transparent;">
+    <div id='stars'></div>
+    <div id='stars2'></div>
+    <div id='stars3'></div>
+    <div class="container">
+        <div id="title" style="position:relative;margin-top:1%;">Create your own quiz!!!</div>
+    </div>
+    <div class="container tp">
+        <div class="container comp_bar">
+            <span class="bar" style="padding-left:10px; border-top-left-radius: 17.5px; border-bottom-left-radius: 17.5px" id="step1"> step 1 </span><span class="bar" id="step2"> step 2 </span><span class="bar" id="step3"> step 3 </span><span class="bar" id="step4"> step 4 </span><span class="bar" id="step5"> step 5 </span><span class="bar" style=" border-top-right-radius: 17.5px; border-bottom-right-radius: 17.5px" id="step6"> step 6 </span>
+        </div>
+    </div>
+    <div class="container form">
         <form method="POST">
-            {{ title.as_p }}
-            <p>question 1</p>
-            {{question1.as_p}}
-            <p>question 2</p>
-            {{question2.as_p}}
-            <p>question 3</p>
-            {{question3.as_p}}
-            <p>question 4</p>
-            {{question4.as_p}}
-            <p>question 5</p>
-            {{question5.as_p}}
+            <div class=" container question" id="0">
+                {{ title.as_p }}
+            </div>
+            <div class="container question" id="1">
+                <p>Question 1</p>
+                {{question1.as_p}}
+            </div>
+            <div class="container question" id="2">
+                <p>Question 2</p>
+                {{question2.as_p}}
+            </div>
+            <div class="container question" id="3">
+                <p>Question 3</p>
+                {{question3.as_p}}
+            </div>
+            <div class="container question" id="4">
+                <p>Question 4</p>
+                {{question4.as_p}}
+            </div>
+            <div class="container question" id="5">
+                <p>Question 5</p>
+                {{question5.as_p}}
+            </div>
             {%  csrf_token %}
-            <input type="submit" class="btn btn-primary" value="create">
+            <input type="submit" class="btn btn-primary submit_btn" id="sub_btn" value="create">
         </form>
+        <div class="container next_button">
+            <a id="next" style="color: #ffff" href="#" >next ></a>
+        </div>
     </div>
 </body>
 <script src="{%static 'cards/js/bootstrap.js'%}"></script>

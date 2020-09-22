@@ -1,0 +1,128 @@
+html{
+    scroll-behavior: smooth;
+}
+
+.question{
+    color:white;
+    font-size:25px;
+    display:grid;
+    justify-content: center;
+    flex-direction: column;
+    text-align:center;
+    font-family: "lato", sans-serif;
+}
+label{
+    color:white;
+    font-family: "lato", sans-serif;
+    font-size:25px;
+    justify-self: start;
+}
+
+p{
+    margin-bottom: 5%;
+    display:grid;
+}
+
+textarea{
+    border:none;
+    padding:10px;
+    color:black;
+    border-radius:20px;
+    width:100%;
+}
+
+.form{
+    margin-top:5%;  
+}
+
+.bar{
+    z-index: 1;
+    color:black;
+    font-family: "lato", sans-serif;
+    background-color:grey;
+    padding-right:10px;
+    padding-top:10px;
+    padding-bottom:10px;
+    font-weight:700;
+    border-right:2px solid black;
+    padding-left: 10px;
+    font-size: 15px;
+    /* border-top-right-radius:50% ;
+    border-bottom-right-radius:50% ; */
+
+}
+.bar:after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 100% solid transparent;
+    border-bottom: 100% solid transparent;
+    border-left: 100% solid black;
+    text-align: center;
+}
+.comp_bar {
+    margin-top:20px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    z-index: 1;
+}
+
+.tp{
+    margin-top:5%;
+    justify-self:center;
+    z-index: 1;
+    justify-content:center;
+}
+
+
+#next{
+    bottom:40px;
+    padding:10px 20px;
+    justify-self: center;
+    border-radius: 20px;
+    align-self: center;
+    color:white;
+    font-size:30px;
+    text-align: center;
+    font-family: "lato", sans-serif;
+    font-weight: 300;
+    letter-spacing: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+#next span {
+    background: -webkit-linear-gradient(white, #38495a);
+    /* -webkit-background-clip: text; */
+    -webkit-text-fill-color: transparent;
+}
+
+.next_button{
+    display:flex;
+    justify-content: end;
+}
+
+form{
+    display:grid;
+}
+
+.submit_btn{
+    z-index: 1;
+    justify-self: center;
+    background-color: #1b4f72;
+    border:none;
+    color:white;
+    font-size:20px;
+    padding:10px 20px;
+    margin-top:20px;
+}
+
+.submit_btn:hover{
+    background-color:white;
+    color: #1b4f72 ;
+    box-shadow: 0 0 30px 20px rgba(0,0,0,0.6);
+    
+}
