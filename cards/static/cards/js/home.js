@@ -1,5 +1,19 @@
 // var x=document.getElementById("1").innerHTML;
 // console.log(x);
+(function()
+{
+  if( window.localStorage )
+  {
+    if( !localStorage.getItem('firstLoad') )
+    {
+      localStorage['firstLoad'] = true;
+      window.location.reload();
+    }  
+    else
+      localStorage.removeItem('firstLoad');
+  }
+})();
+
 var questions=[];
 for(var i=1;i<=5;i++){
     if(document.getElementById(i)){
@@ -72,7 +86,8 @@ function fly_away1(){
         if (pos==800||up==3000) {
             clearInterval(id);
             // url for the next page will go here 
-            window.location.replace("home/"+questions[0]);
+            var url=window.location.href;
+            window.location.replace(questions[0], url);
 
         }
         else{
@@ -128,8 +143,8 @@ function fly_away2(){
         if (pos==800) {
             clearInterval(id);
             // url for the next page will go here 
-            window.location.replace("home/"+questions[1]);
-
+            var url=window.location.href;
+            window.location.replace(questions[1], url);
         }
         else{
             var show=setInterval(fade,100);
@@ -184,7 +199,8 @@ function fly_away3(){
         if (pos==800||up==3000) {
             clearInterval(id);
             // url for the next page will go here
-            window.location.replace("home/"+questions[2]);
+            var url=window.location.href;
+            window.location.replace(questions[2], url);
         }
         else{
             var show=setInterval(fade,1);
@@ -238,7 +254,8 @@ function fly_away4(){
         if (pos==800||up==3000) {
             clearInterval(id);
             // url for the next page will go here
-            window.location.replace("home/"+questions[3]);
+            var url=window.location.href;
+            window.location.replace(questions[3], url);
         }
         else{
             var show=setInterval(fade,1);
@@ -293,7 +310,8 @@ function fly_away5(){
         if (pos==800||up==3000) {
             clearInterval(id);
             // url for the next page will go over here
-            window.location.replace("home/"+questions[4]);
+            var url=window.location.href;
+            window.location.replace(questions[4], url);
         }
         else{
             var show=setInterval(fade,1);

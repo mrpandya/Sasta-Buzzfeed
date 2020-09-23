@@ -8,6 +8,7 @@
   <link rel="stylesheet" type="text/css" href="{%static 'cards/css/stars.css'%}">
   <link rel="stylesheet" type="text/css" href="{%static 'cards/css/bootstrap.css'%}">
   <link rel="stylesheet" type="text/css" href="{%static 'cards/css/question.css'%}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <title>Quiz | Sasta BuzzFeed</title>
 </head>
@@ -62,6 +63,9 @@
                     <a style="color:lightgreen">buzzfeed@home</a><a style="color:aqua">:~</a><a style="color:lightblue">$</a> <span id="answer_txt">{{question_list.sel_answer}}</span>
                 </div>
             </div>
+        </div>
+        <div class="container" id="answer" style="display: flex;justify-content:center;margin-top:5%">
+        <a href="/home/" class="cross_btn" style="color:white;margin-right:40px;"><i class="fa fa-times fa-2x cross_btn" ></i></a><a style="color:white;margin-left:40px;" id="retry" href=""><i class="fa fa-refresh fa-2x"></i></a>
         </div>
     </div>
 </body>

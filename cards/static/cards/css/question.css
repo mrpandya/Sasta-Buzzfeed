@@ -188,3 +188,13 @@
     scroll-behavior: smooth;
 
 }
+
+.fa-times:hover{
+    color:red;
+    font-size: 2.5rem;
+}
+
+.fa-refresh:hover{
+    color:lightblue;
+    font-size:2.5rem;
+}
