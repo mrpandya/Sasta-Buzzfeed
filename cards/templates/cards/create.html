@@ -24,7 +24,15 @@
         </div>
     </div>
     <div class="container form">
-        <form method="POST">
+        <script>
+            function created_form() {
+                var snac=document.getElementById('snackbar');
+                snac.className = "show";
+                setTimeout(function(){ snac.className = snac.className.replace("show", ""); }, 3000);
+                window.location.replace('/home/');
+            }
+        </script>
+        <form onsubmit="created_form()" method="POST">
             <div class=" container question" id="0">
                 {{ title.as_p }}
             </div>
@@ -51,6 +59,7 @@
             {%  csrf_token %}
             <input type="submit" class="btn btn-primary submit_btn" id="sub_btn" value="create">
         </form>
+        <div id="snackbar">Quiz has been successfully created</div> 
         <div class="container next_button">
             <a id="next" style="color: #ffff" href="#" >next ></a>
         </div>
