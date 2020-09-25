@@ -1,4 +1,4 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect,HttpResponseRedirect
 from django.views import generic
 from .models import Title
 from django.views.generic import CreateView
@@ -61,7 +61,8 @@ def Create(request):
             q4.save()
             q5.title=t
             q5.save()
-
+            response=redirect('/home/')
+            return response
 
     return render(request, 'cards/create.html', {'title': title, 'question1': question1, 'question2': question2, 'question3': question3, 'question4': question4,'question5': question5})
 

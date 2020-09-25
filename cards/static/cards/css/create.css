@@ -47,7 +47,7 @@ textarea{
     border-right:2px solid black;
     padding-left: 10px;
     font-size: 15px;
-    cursor: grab;
+    cursor: pointer;
     /* border-top-right-radius:50% ;
     border-bottom-right-radius:50% ; */
 
@@ -121,13 +121,22 @@ form{
     margin-top:20px;
 }
 
+.submit_btn_txt{
+    color: white;
+    font-size:20px;
+}
+
+.submit_btn_txt:hover{
+    color: #1b4f72 ;
+    text-decoration: none;
+}
+
 .submit_btn:hover{
     background-color:white;
     color: #1b4f72 ;
     box-shadow: 0 0 30px 20px rgba(0,0,0,0.6);
-    
+    color :color #1b4f72;
 }
-
 #snackbar {
     visibility: hidden;
     min-width: 250px; 
@@ -168,3 +177,27 @@ form{
     from {bottom: 30px; opacity: 1;}
     to {bottom: 0; opacity: 0;}
   }
+
+#successful_msg a{
+    color:white;
+    font-size:2rem;
+}
+
+.suc_msg{
+    color:white;
+    /* font-size:2rem; */
+    display:grid;
+    grid:column;
+    text-align:center;
+    justify-content: center;
+}
+
+.fa-chevron-left{
+    color:white;
+    font-size:3rem;
+    justify-self: center;
+}
+.fa-chevron-left:hover{
+    color:lightgreen;
+    font-size:3rem;
+}

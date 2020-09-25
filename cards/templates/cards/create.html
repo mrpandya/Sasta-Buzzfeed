@@ -8,6 +8,7 @@
   <link rel="stylesheet" type="text/css" href="{%static 'cards/css/stars.css'%}">
   <link rel="stylesheet" type="text/css" href="{%static 'cards/css/bootstrap.css'%}">
   <link rel="stylesheet" type="text/css" href="{%static 'cards/css/create.css'%}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <title>Create | Sasta BuzzFeed</title>
 </head>
@@ -24,15 +25,7 @@
         </div>
     </div>
     <div class="container form">
-        <script>
-            function created_form() {
-                var snac=document.getElementById('snackbar');
-                snac.className = "show";
-                setTimeout(function(){ snac.className = snac.className.replace("show", ""); }, 3000);
-                window.location.replace('/home/');
-            }
-        </script>
-        <form onsubmit="created_form()" method="POST">
+        <form id="form_data" method="POST">
             <div class=" container question" id="0">
                 {{ title.as_p }}
             </div>
@@ -57,14 +50,31 @@
                 {{question5.as_p}}
             </div>
             {%  csrf_token %}
-            <input type="submit" class="btn btn-primary submit_btn" id="sub_btn" value="create">
+            <button id="sub_btn" class="btn btn-primary submit_btn" type="submit"><a class="submit_btn_txt" id="button_pressed">create</a></button>
+            <!-- <input type="submit" href="/home" class="btn btn-primary submit_btn" id="sub_btn" value="create"> -->
         </form>
         <div id="snackbar">Quiz has been successfully created</div> 
         <div class="container next_button">
-            <a id="next" style="color: #ffff" href="#" >next ></a>
+            <a id="next" style="color: #ffff" >next ></a>
+        </div>
+        <div class="container" id="successful_msg" style="display:grid;">
+            <a class="suc_msg" style="color:white;font-size:2rem;font-family:'lato', sans-serif; font-weight: 300;letter-spacing: 10px;margin-bottom:2%;"> Return back to home page</a>
+            <i class="fa fa-chevron-left fa-2x"></i>
         </div>
     </div>
 </body>
+<script>
+//     function created_form() {
+//         var snac=document.getElementById('snackbar');
+//         snac.className = "show";
+//         console.log("create button pressed");
+//         // document.getElementsByClassName("bar")[5].style.background="lightgreen";
+//         setTimeout(function(){ snac.className = snac.className.replace("show", ""); }, 3000);
+//         // document.getElementsByClassName("form")[0].style.display="none";
+//         // document.getElementById("successful_msg").style.display="grid";
+//         window.location.replace('/tryagain');
+//     }
+</script>
 <script src="{%static 'cards/js/bootstrap.js'%}"></script>
 <script src="{%static 'cards/js/create.js'%}"></script>
 </html>
