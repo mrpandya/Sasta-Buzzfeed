@@ -58,6 +58,11 @@ if(document.getElementById("title5")){
 // document.getElementById("title4").onclick=function(){fly_away4();};
 // document.getElementById("title5").onclick=function(){fly_away5();};
 
+// fly away functions
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 
 function fly_away1(){
     console.log("hello1");
@@ -69,43 +74,44 @@ function fly_away1(){
     var title=document.getElementById("title1");
     var opa=1;
     var box=0;
-    var id = setInterval(left,5);
-    function left() {
-        if (pos==500||up==3000) {
-            console.log("500 = "+pos);
-            setTimeout(left1,1000);
-            return 0;
-            // clearInterval(id);
-        }
-        else{
-            if(pos==800){
-                console.log("800 = ",pos);
-                clearInterval(id);
-                // url for the next page will go here 
-                var url=window.location.href;
-                window.location.replace(questions[0], url);
-            }
-            console.log(pos);
+    left();
+    // var id = setInterval(left,1);
+    async function left() {
+        for(var i=1;i<=500;i++){
+            console.log(up);
             pos++;
             ufo.style.transform="translateY("+up+"px)";
             ufo.style.transform="translateX("+pos+"px)";
+            await sleep(1);
         }
+        // if (pos<500||up==3000) {
+        //     // clearInterval(id);
+        //     // clearInterval(id);
+        //     console.log(up);
+        //     pos++;
+        //     ufo.style.transform="translateY("+up+"px)";
+        //     ufo.style.transform="translateX("+pos+"px)";
+        // }
+        // else if(pos==500){
+        setTimeout(left1,1000);
+        // }
     }
-    function left1() {
-        if (pos==800||up==3000) {
-            console.log("800 = ",pos);
-            clearInterval(id);
+    async function left1() {
+        if (pos==800) {
+            console.log("ending left 1");
+            // clearInterval(id);
             // url for the next page will go here 
             var url=window.location.href;
             window.location.replace(questions[0], url);
-
         }
         else{
-            var show=setInterval(fade,1);
+            var show=setInterval(fade,10);
             console.log("left 1 ",pos);
             pos++;
             ufo.style.transform="translateY("+up+"px)";
             ufo.style.transform="translateX("+pos+"px)";
+            await sleep(1);
+            left1();
         }
     }
     function fade(){
@@ -124,10 +130,6 @@ function fly_away1(){
             title.style.opacity=opa;
         }
     }
-}
-
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 //nishit
@@ -163,7 +165,7 @@ function fly_away2(){
         setTimeout(left1,1000);
         // }
     }
-    function left1() {
+    async function left1() {
         if (pos==800) {
             console.log("ending left 1");
             // clearInterval(id);
@@ -177,6 +179,7 @@ function fly_away2(){
             pos++;
             ufo.style.transform="translateY("+up+"px)";
             ufo.style.transform="translateX("+pos+"px)";
+            await sleep(1);
             left1();
         }
     }
@@ -199,7 +202,7 @@ function fly_away2(){
 }
 
 function fly_away3(){
-    console.log("hello3");
+    console.log("hello1");
     var pos=0;
     var up=0;
     document.getElementById("ufo1").style.display="initial";
@@ -208,32 +211,44 @@ function fly_away3(){
     var title=document.getElementById("title3");
     var opa=1;
     var box=0;
-    var id = setInterval(left,5);
-    function left() {
-        if (pos==500||up==3000) {
-            setTimeout(left1,1000);
-            // clearInterval(id);
-        }
-        else{
+    left();
+    // var id = setInterval(left,1);
+    async function left() {
+        for(var i=1;i<=500;i++){
             console.log(up);
             pos++;
             ufo.style.transform="translateY("+up+"px)";
             ufo.style.transform="translateX("+pos+"px)";
+            await sleep(1);
         }
+        // if (pos<500||up==3000) {
+        //     // clearInterval(id);
+        //     // clearInterval(id);
+        //     console.log(up);
+        //     pos++;
+        //     ufo.style.transform="translateY("+up+"px)";
+        //     ufo.style.transform="translateX("+pos+"px)";
+        // }
+        // else if(pos==500){
+        setTimeout(left1,1000);
+        // }
     }
-    function left1() {
-        if (pos==800||up==3000) {
-            clearInterval(id);
-            // url for the next page will go here
+    async function left1() {
+        if (pos==800) {
+            console.log("ending left 1");
+            // clearInterval(id);
+            // url for the next page will go here 
             var url=window.location.href;
             window.location.replace(questions[2], url);
         }
         else{
-            var show=setInterval(fade,1);
-            console.log(up);
+            var show=setInterval(fade,10);
+            console.log("left 1 ",pos);
             pos++;
             ufo.style.transform="translateY("+up+"px)";
             ufo.style.transform="translateX("+pos+"px)";
+            await sleep(1);
+            left1();
         }
     }
     function fade(){
@@ -251,10 +266,11 @@ function fly_away3(){
             }
             title.style.opacity=opa;
         }
-}}
+    }
+}
 
 function fly_away4(){
-    console.log("hello4");
+    console.log("hello1");
     var pos=0;
     var up=0;
     document.getElementById("ufo1").style.display="initial";
@@ -263,32 +279,44 @@ function fly_away4(){
     var title=document.getElementById("title4");
     var opa=1;
     var box=0;
-    var id = setInterval(left,5);
-    function left() {
-        if (pos==500||up==3000) {
-            setTimeout(left1,1000);
-            // clearInterval(id);
-        }
-        else{
+    left();
+    // var id = setInterval(left,1);
+    async function left() {
+        for(var i=1;i<=500;i++){
             console.log(up);
             pos++;
             ufo.style.transform="translateY("+up+"px)";
             ufo.style.transform="translateX("+pos+"px)";
+            await sleep(1);
         }
+        // if (pos<500||up==3000) {
+        //     // clearInterval(id);
+        //     // clearInterval(id);
+        //     console.log(up);
+        //     pos++;
+        //     ufo.style.transform="translateY("+up+"px)";
+        //     ufo.style.transform="translateX("+pos+"px)";
+        // }
+        // else if(pos==500){
+        setTimeout(left1,1000);
+        // }
     }
-    function left1() {
-        if (pos==800||up==3000) {
-            clearInterval(id);
-            // url for the next page will go here
+    async function left1() {
+        if (pos==800) {
+            console.log("ending left 1");
+            // clearInterval(id);
+            // url for the next page will go here 
             var url=window.location.href;
             window.location.replace(questions[3], url);
         }
         else{
-            var show=setInterval(fade,1);
-            console.log(up);
+            var show=setInterval(fade,10);
+            console.log("left 1 ",pos);
             pos++;
             ufo.style.transform="translateY("+up+"px)";
             ufo.style.transform="translateX("+pos+"px)";
+            await sleep(1);
+            left1();
         }
     }
     function fade(){
@@ -306,11 +334,11 @@ function fly_away4(){
             }
             title.style.opacity=opa;
         }
-}
+    }
 }
 
 function fly_away5(){
-    console.log("hello5");
+    console.log("hello1");
     var pos=0;
     var up=0;
     document.getElementById("ufo1").style.display="initial";
@@ -319,32 +347,44 @@ function fly_away5(){
     var title=document.getElementById("title5");
     var opa=1;
     var box=0;
-    var id = setInterval(left,5);
-    function left() {
-        if (pos==500||up==3000) {
-            setTimeout(left1,1000);
-            // clearInterval(id);
-        }
-        else{
+    left();
+    // var id = setInterval(left,1);
+    async function left() {
+        for(var i=1;i<=500;i++){
             console.log(up);
             pos++;
             ufo.style.transform="translateY("+up+"px)";
             ufo.style.transform="translateX("+pos+"px)";
+            await sleep(1);
         }
+        // if (pos<500||up==3000) {
+        //     // clearInterval(id);
+        //     // clearInterval(id);
+        //     console.log(up);
+        //     pos++;
+        //     ufo.style.transform="translateY("+up+"px)";
+        //     ufo.style.transform="translateX("+pos+"px)";
+        // }
+        // else if(pos==500){
+        setTimeout(left1,1000);
+        // }
     }
-    function left1() {
-        if (pos==800||up==3000) {
-            clearInterval(id);
-            // url for the next page will go over here
+    async function left1() {
+        if (pos==800) {
+            console.log("ending left 1");
+            // clearInterval(id);
+            // url for the next page will go here 
             var url=window.location.href;
             window.location.replace(questions[4], url);
         }
         else{
-            var show=setInterval(fade,1);
-            console.log(up);
+            var show=setInterval(fade,10);
+            console.log("left 1 ",pos);
             pos++;
             ufo.style.transform="translateY("+up+"px)";
             ufo.style.transform="translateX("+pos+"px)";
+            await sleep(1);
+            left1();
         }
     }
     function fade(){

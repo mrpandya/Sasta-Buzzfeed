@@ -23,8 +23,8 @@ document.getElementById("next").onclick=function(){
         document.getElementById("next").style.display="none";
         document.getElementById("sub_btn").style.display = "flex";
     }
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
+    // document.body.scrollTop = 0;
+    // document.documentElement.scrollTop = 0;
 }
 
 function goto(x){
