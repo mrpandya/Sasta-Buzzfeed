@@ -1,13 +1,20 @@
 <h1 align="center">Sasta BuzzFeed :rocket:</h1>
 <div align="center">
   <br>
-  <h3> A Quizz app like BuzzFeed made with Django</h3>
+  <h3> A Quizz app like BuzzFeed made using Django</h3>
 </div>
 
 ---
 
 -Snapshots of the project :
-  
+
+![img](screenshots/ss1.png)
+![img](screenshots/ss2.png)  
+![img](screenshots/ss3.png)  
+![img](screenshots/ss5.png)
+![img](screenshots/ss6.png)  
+
+
 
   
 ### To run this project :
